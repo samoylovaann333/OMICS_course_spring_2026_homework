@@ -1,0 +1,51 @@
+m option was not given, running entire pipeline
+Using /Users/anna/Desktop/day1_HiC_practice/data/reference/restriction_sites_DpnII.txt as site file
+(-: Looking for fastq files...fastq files exist
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Not including fragment map
+Start preprocess
+Writing header
+Writing body
+.......................................................................................................................................................................................................................................................................................
+Writing footer
+
+Finished preprocess
+Error reading datasetnull
+java.io.EOFException
+	at htsjdk.tribble.util.LittleEndianInputStream.readString(LittleEndianInputStream.java:119)
+	at juicebox.data.DatasetReaderV2.read(DatasetReaderV2.java:156)
+	at juicebox.tools.utils.original.NormalizationVectorUpdater.updateHicFile(NormalizationVectorUpdater.java:78)
+	at juicebox.tools.clt.old.PreProcessing.run(PreProcessing.java:121)
+	at juicebox.tools.HiCTools.main(HiCTools.java:96)
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Not including fragment map
+Start preprocess
+Writing header
+Writing body
+....................................................................................................................................................................................................................................................................................
+Writing footer
+
+Finished preprocess
+Error reading datasetnull
+java.io.EOFException
+	at htsjdk.tribble.util.LittleEndianInputStream.readString(LittleEndianInputStream.java:119)
+	at juicebox.data.DatasetReaderV2.read(DatasetReaderV2.java:156)
+	at juicebox.tools.utils.original.NormalizationVectorUpdater.updateHicFile(NormalizationVectorUpdater.java:78)
+	at juicebox.tools.clt.old.PreProcessing.run(PreProcessing.java:121)
+	at juicebox.tools.HiCTools.main(HiCTools.java:96)
+/Users/anna/Desktop/day1_HiC_practice/tools/juicer/scripts/common/juicer_tools is post-processing Hi-C for T2T_human
+Data read from /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh7/aligned/inter_30.hic.
+Motifs read from /Users/anna/Desktop/day1_HiC_practice/tools/juicer/references/motif
+
+ARROWHEAD:
+
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Reading file: /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh7/aligned/inter_30.hic
+Error reading datasetnull
+Could not read hic file: null
+***! Problem while running Arrowhead
+(-: Pipeline successfully completed (-:
+Run cleanup.sh to remove the splits directory
+Check /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh7/aligned for results
+**! cool file creation was not required by the user

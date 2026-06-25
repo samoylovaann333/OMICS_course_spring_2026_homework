@@ -1,0 +1,4 @@
+data/
+docker_test_out/
+results/star/
+results/tracks/**/*.bw

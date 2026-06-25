@@ -1,0 +1,415 @@
+=== [MoPh11] Шаг 1/6: скачивание FASTQ ===
+=== [MoPh11] Шаг 2/6: FastQC на сырых ридах ===
+application/gzip
+application/gzip
+Started analysis of MoPh11_R1.fastq.gz
+Approx 5% complete for MoPh11_R1.fastq.gz
+Approx 10% complete for MoPh11_R1.fastq.gz
+Approx 15% complete for MoPh11_R1.fastq.gz
+Approx 20% complete for MoPh11_R1.fastq.gz
+Approx 25% complete for MoPh11_R1.fastq.gz
+Approx 30% complete for MoPh11_R1.fastq.gz
+Approx 35% complete for MoPh11_R1.fastq.gz
+Approx 40% complete for MoPh11_R1.fastq.gz
+Approx 45% complete for MoPh11_R1.fastq.gz
+Approx 50% complete for MoPh11_R1.fastq.gz
+Approx 55% complete for MoPh11_R1.fastq.gz
+Approx 60% complete for MoPh11_R1.fastq.gz
+Approx 65% complete for MoPh11_R1.fastq.gz
+Approx 70% complete for MoPh11_R1.fastq.gz
+Approx 75% complete for MoPh11_R1.fastq.gz
+Approx 80% complete for MoPh11_R1.fastq.gz
+Approx 85% complete for MoPh11_R1.fastq.gz
+Approx 90% complete for MoPh11_R1.fastq.gz
+Approx 95% complete for MoPh11_R1.fastq.gz
+Analysis complete for MoPh11_R1.fastq.gz
+Started analysis of MoPh11_R2.fastq.gz
+Approx 5% complete for MoPh11_R2.fastq.gz
+Approx 10% complete for MoPh11_R2.fastq.gz
+Approx 15% complete for MoPh11_R2.fastq.gz
+Approx 20% complete for MoPh11_R2.fastq.gz
+Approx 25% complete for MoPh11_R2.fastq.gz
+Approx 30% complete for MoPh11_R2.fastq.gz
+Approx 35% complete for MoPh11_R2.fastq.gz
+Approx 40% complete for MoPh11_R2.fastq.gz
+Approx 45% complete for MoPh11_R2.fastq.gz
+Approx 50% complete for MoPh11_R2.fastq.gz
+Approx 55% complete for MoPh11_R2.fastq.gz
+Approx 60% complete for MoPh11_R2.fastq.gz
+Approx 65% complete for MoPh11_R2.fastq.gz
+Approx 70% complete for MoPh11_R2.fastq.gz
+Approx 75% complete for MoPh11_R2.fastq.gz
+Approx 80% complete for MoPh11_R2.fastq.gz
+Approx 85% complete for MoPh11_R2.fastq.gz
+Approx 90% complete for MoPh11_R2.fastq.gz
+Approx 95% complete for MoPh11_R2.fastq.gz
+Analysis complete for MoPh11_R2.fastq.gz
+=== [MoPh11] Шаг 3/6: обрезка адаптеров cutadapt ===
+=== [MoPh11] Шаг 4/6: подготовка директории Juicer ===
+=== [MoPh11] Шаг 5/6: запуск Juicer ===
+m option was not given, running entire pipeline
+Using /Users/anna/Desktop/day1_HiC_practice/data/reference/restriction_sites_DpnII.txt as site file
+(-: Looking for fastq files...fastq files exist
+(-: Aligning files matching /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/fastq/*_R*.fastq*
+ to genome T2T_human with site file /Users/anna/Desktop/day1_HiC_practice/data/reference/restriction_sites_DpnII.txt
+(-: Created /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/splits and /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/aligned.
+bwa mem -SP5M -t 4 /Users/anna/Desktop/day1_HiC_practice/data/reference/T2T_human.fna /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/splits/MoPh11_R1.fastq.gz /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/splits/MoPh11_R2.fastq.gz | samtools view -O BAM > /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/splits/MoPh11.fastq.gz.bam
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 64066 sequences (8907698 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (338, 19095, 310, 342)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (944, 2606, 5295)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 13997)
+[M::mem_pestat] mean and std.dev: (3288.79, 2716.08)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 18348)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (75, 110, 205)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 465)
+[M::mem_pestat] mean and std.dev: (138.10, 93.73)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 595)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (1495, 3759, 6403)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 16219)
+[M::mem_pestat] mean and std.dev: (4111.17, 2921.57)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 21127)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (1019, 2382, 5126)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 13340)
+[M::mem_pestat] mean and std.dev: (3293.45, 2753.22)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 17447)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 64066 reads in 19.565 CPU sec, 5.091 real sec
+[main] Version: 0.7.19-r1273
+[main] CMD: bwa mem -SP5M -t 4 /Users/anna/Desktop/day1_HiC_practice/data/reference/T2T_human.fna /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/splits/MoPh11_R1.fastq.gz /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/splits/MoPh11_R2.fastq.gz
+[main] Real time: 7.085 sec; CPU: 20.396 sec
+(-:  Align of /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/splits/MoPh11.fastq.gz.bam done successfully
+(-: Finished sorting all sorted files into a single merge.
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Not including fragment map
+Start preprocess
+Writing header
+Writing body
+........................................................................................................................................................................................................................................................................................
+Writing footer
+
+Finished preprocess
+Error reading datasetnull
+java.io.EOFException
+	at htsjdk.tribble.util.LittleEndianInputStream.readString(LittleEndianInputStream.java:119)
+	at juicebox.data.DatasetReaderV2.read(DatasetReaderV2.java:156)
+	at juicebox.tools.utils.original.NormalizationVectorUpdater.updateHicFile(NormalizationVectorUpdater.java:78)
+	at juicebox.tools.clt.old.PreProcessing.run(PreProcessing.java:121)
+	at juicebox.tools.HiCTools.main(HiCTools.java:96)
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Not including fragment map
+Start preprocess
+Writing header
+Writing body
+....................................................................................................................................................................................................................................................................................
+Writing footer
+
+Finished preprocess
+Error reading datasetnull
+java.io.EOFException
+	at htsjdk.tribble.util.LittleEndianInputStream.readString(LittleEndianInputStream.java:119)
+	at juicebox.data.DatasetReaderV2.read(DatasetReaderV2.java:156)
+	at juicebox.tools.utils.original.NormalizationVectorUpdater.updateHicFile(NormalizationVectorUpdater.java:78)
+	at juicebox.tools.clt.old.PreProcessing.run(PreProcessing.java:121)
+	at juicebox.tools.HiCTools.main(HiCTools.java:96)
+/Users/anna/Desktop/day1_HiC_practice/tools/juicer/scripts/common/juicer_tools is post-processing Hi-C for T2T_human
+Data read from /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/aligned/inter_30.hic.
+Motifs read from /Users/anna/Desktop/day1_HiC_practice/tools/juicer/references/motif
+
+ARROWHEAD:
+
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Reading file: /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/aligned/inter_30.hic
+Error reading datasetnull
+Could not read hic file: null
+***! Problem while running Arrowhead
+(-: Pipeline successfully completed (-:
+Run cleanup.sh to remove the splits directory
+Check /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh11/aligned for results
+**! cool file creation was not required by the user
+=== [MoPh11] Шаг 6/6: сохранение .hic в results/hic ===
+=== [MoPh11] готово: results/hic/MoPh11.inter_30.hic ===
+=== [MoPh14] Шаг 1/6: скачивание FASTQ ===
+=== [MoPh14] Шаг 2/6: FastQC на сырых ридах ===
+application/gzip
+application/gzip
+Started analysis of MoPh14_R1.fastq.gz
+Approx 5% complete for MoPh14_R1.fastq.gz
+Approx 10% complete for MoPh14_R1.fastq.gz
+Approx 15% complete for MoPh14_R1.fastq.gz
+Approx 20% complete for MoPh14_R1.fastq.gz
+Approx 25% complete for MoPh14_R1.fastq.gz
+Approx 30% complete for MoPh14_R1.fastq.gz
+Approx 35% complete for MoPh14_R1.fastq.gz
+Approx 40% complete for MoPh14_R1.fastq.gz
+Approx 45% complete for MoPh14_R1.fastq.gz
+Approx 50% complete for MoPh14_R1.fastq.gz
+Approx 55% complete for MoPh14_R1.fastq.gz
+Approx 60% complete for MoPh14_R1.fastq.gz
+Approx 65% complete for MoPh14_R1.fastq.gz
+Approx 70% complete for MoPh14_R1.fastq.gz
+Approx 75% complete for MoPh14_R1.fastq.gz
+Approx 80% complete for MoPh14_R1.fastq.gz
+Approx 85% complete for MoPh14_R1.fastq.gz
+Approx 90% complete for MoPh14_R1.fastq.gz
+Approx 95% complete for MoPh14_R1.fastq.gz
+Analysis complete for MoPh14_R1.fastq.gz
+Started analysis of MoPh14_R2.fastq.gz
+Approx 5% complete for MoPh14_R2.fastq.gz
+Approx 10% complete for MoPh14_R2.fastq.gz
+Approx 15% complete for MoPh14_R2.fastq.gz
+Approx 20% complete for MoPh14_R2.fastq.gz
+Approx 25% complete for MoPh14_R2.fastq.gz
+Approx 30% complete for MoPh14_R2.fastq.gz
+Approx 35% complete for MoPh14_R2.fastq.gz
+Approx 40% complete for MoPh14_R2.fastq.gz
+Approx 45% complete for MoPh14_R2.fastq.gz
+Approx 50% complete for MoPh14_R2.fastq.gz
+Approx 55% complete for MoPh14_R2.fastq.gz
+Approx 60% complete for MoPh14_R2.fastq.gz
+Approx 65% complete for MoPh14_R2.fastq.gz
+Approx 70% complete for MoPh14_R2.fastq.gz
+Approx 75% complete for MoPh14_R2.fastq.gz
+Approx 80% complete for MoPh14_R2.fastq.gz
+Approx 85% complete for MoPh14_R2.fastq.gz
+Approx 90% complete for MoPh14_R2.fastq.gz
+Approx 95% complete for MoPh14_R2.fastq.gz
+Analysis complete for MoPh14_R2.fastq.gz
+=== [MoPh14] Шаг 3/6: обрезка адаптеров cutadapt ===
+=== [MoPh14] Шаг 4/6: подготовка директории Juicer ===
+=== [MoPh14] Шаг 5/6: запуск Juicer ===
+m option was not given, running entire pipeline
+Using /Users/anna/Desktop/day1_HiC_practice/data/reference/restriction_sites_DpnII.txt as site file
+(-: Looking for fastq files...fastq files exist
+(-: Aligning files matching /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/fastq/*_R*.fastq*
+ to genome T2T_human with site file /Users/anna/Desktop/day1_HiC_practice/data/reference/restriction_sites_DpnII.txt
+(-: Created /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/splits and /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/aligned.
+bwa mem -SP5M -t 4 /Users/anna/Desktop/day1_HiC_practice/data/reference/T2T_human.fna /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/splits/MoPh14_R1.fastq.gz /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/splits/MoPh14_R2.fastq.gz | samtools view -O BAM > /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/splits/MoPh14.fastq.gz.bam
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 65840 sequences (9241345 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (301, 19825, 233, 246)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (892, 2701, 4957)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 13087)
+[M::mem_pestat] mean and std.dev: (3189.25, 2620.91)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 17152)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (76, 121, 246)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 586)
+[M::mem_pestat] mean and std.dev: (164.36, 122.35)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 756)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (1256, 3374, 6642)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 17414)
+[M::mem_pestat] mean and std.dev: (4013.50, 2963.39)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 22800)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (935, 3016, 5446)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 14468)
+[M::mem_pestat] mean and std.dev: (3573.11, 2758.97)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 18979)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 65840 reads in 20.298 CPU sec, 5.292 real sec
+[main] Version: 0.7.19-r1273
+[main] CMD: bwa mem -SP5M -t 4 /Users/anna/Desktop/day1_HiC_practice/data/reference/T2T_human.fna /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/splits/MoPh14_R1.fastq.gz /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/splits/MoPh14_R2.fastq.gz
+[main] Real time: 7.380 sec; CPU: 21.059 sec
+(-:  Align of /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/splits/MoPh14.fastq.gz.bam done successfully
+(-: Finished sorting all sorted files into a single merge.
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Not including fragment map
+Start preprocess
+Writing header
+Writing body
+.......................................................................................................................................................................................................................................................................................
+Writing footer
+
+Finished preprocess
+Error reading datasetnull
+java.io.EOFException
+	at htsjdk.tribble.util.LittleEndianInputStream.readString(LittleEndianInputStream.java:119)
+	at juicebox.data.DatasetReaderV2.read(DatasetReaderV2.java:156)
+	at juicebox.tools.utils.original.NormalizationVectorUpdater.updateHicFile(NormalizationVectorUpdater.java:78)
+	at juicebox.tools.clt.old.PreProcessing.run(PreProcessing.java:121)
+	at juicebox.tools.HiCTools.main(HiCTools.java:96)
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Not including fragment map
+Start preprocess
+Writing header
+Writing body
+...................................................................................................................................................................................................................................................................................
+Writing footer
+
+Finished preprocess
+Error reading datasetnull
+java.io.EOFException
+	at htsjdk.tribble.util.LittleEndianInputStream.readString(LittleEndianInputStream.java:119)
+	at juicebox.data.DatasetReaderV2.read(DatasetReaderV2.java:156)
+	at juicebox.tools.utils.original.NormalizationVectorUpdater.updateHicFile(NormalizationVectorUpdater.java:78)
+	at juicebox.tools.clt.old.PreProcessing.run(PreProcessing.java:121)
+	at juicebox.tools.HiCTools.main(HiCTools.java:96)
+/Users/anna/Desktop/day1_HiC_practice/tools/juicer/scripts/common/juicer_tools is post-processing Hi-C for T2T_human
+Data read from /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/aligned/inter_30.hic.
+Motifs read from /Users/anna/Desktop/day1_HiC_practice/tools/juicer/references/motif
+
+ARROWHEAD:
+
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Reading file: /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/aligned/inter_30.hic
+Error reading datasetnull
+Could not read hic file: null
+***! Problem while running Arrowhead
+(-: Pipeline successfully completed (-:
+Run cleanup.sh to remove the splits directory
+Check /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh14/aligned for results
+**! cool file creation was not required by the user
+=== [MoPh14] Шаг 6/6: сохранение .hic в results/hic ===
+=== [MoPh14] готово: results/hic/MoPh14.inter_30.hic ===
+=== [MoPh15] Шаг 1/6: скачивание FASTQ ===
+=== [MoPh15] Шаг 2/6: FastQC на сырых ридах ===
+application/gzip
+application/gzip
+Started analysis of MoPh15_R1.fastq.gz
+Approx 5% complete for MoPh15_R1.fastq.gz
+Approx 10% complete for MoPh15_R1.fastq.gz
+Approx 15% complete for MoPh15_R1.fastq.gz
+Approx 20% complete for MoPh15_R1.fastq.gz
+Approx 25% complete for MoPh15_R1.fastq.gz
+Approx 30% complete for MoPh15_R1.fastq.gz
+Approx 35% complete for MoPh15_R1.fastq.gz
+Approx 40% complete for MoPh15_R1.fastq.gz
+Approx 45% complete for MoPh15_R1.fastq.gz
+Approx 50% complete for MoPh15_R1.fastq.gz
+Approx 55% complete for MoPh15_R1.fastq.gz
+Approx 60% complete for MoPh15_R1.fastq.gz
+Approx 65% complete for MoPh15_R1.fastq.gz
+Approx 70% complete for MoPh15_R1.fastq.gz
+Approx 75% complete for MoPh15_R1.fastq.gz
+Approx 80% complete for MoPh15_R1.fastq.gz
+Approx 85% complete for MoPh15_R1.fastq.gz
+Approx 90% complete for MoPh15_R1.fastq.gz
+Approx 95% complete for MoPh15_R1.fastq.gz
+Analysis complete for MoPh15_R1.fastq.gz
+Started analysis of MoPh15_R2.fastq.gz
+Approx 5% complete for MoPh15_R2.fastq.gz
+Approx 10% complete for MoPh15_R2.fastq.gz
+Approx 15% complete for MoPh15_R2.fastq.gz
+Approx 20% complete for MoPh15_R2.fastq.gz
+Approx 25% complete for MoPh15_R2.fastq.gz
+Approx 30% complete for MoPh15_R2.fastq.gz
+Approx 35% complete for MoPh15_R2.fastq.gz
+Approx 40% complete for MoPh15_R2.fastq.gz
+Approx 45% complete for MoPh15_R2.fastq.gz
+Approx 50% complete for MoPh15_R2.fastq.gz
+Approx 55% complete for MoPh15_R2.fastq.gz
+Approx 60% complete for MoPh15_R2.fastq.gz
+Approx 65% complete for MoPh15_R2.fastq.gz
+Approx 70% complete for MoPh15_R2.fastq.gz
+Approx 75% complete for MoPh15_R2.fastq.gz
+Approx 80% complete for MoPh15_R2.fastq.gz
+Approx 85% complete for MoPh15_R2.fastq.gz
+Approx 90% complete for MoPh15_R2.fastq.gz
+Approx 95% complete for MoPh15_R2.fastq.gz
+Analysis complete for MoPh15_R2.fastq.gz
+=== [MoPh15] Шаг 3/6: обрезка адаптеров cutadapt ===
+=== [MoPh15] Шаг 4/6: подготовка директории Juicer ===
+=== [MoPh15] Шаг 5/6: запуск Juicer ===
+m option was not given, running entire pipeline
+Using /Users/anna/Desktop/day1_HiC_practice/data/reference/restriction_sites_DpnII.txt as site file
+(-: Looking for fastq files...fastq files exist
+(-: Aligning files matching /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/fastq/*_R*.fastq*
+ to genome T2T_human with site file /Users/anna/Desktop/day1_HiC_practice/data/reference/restriction_sites_DpnII.txt
+(-: Created /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/splits and /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/aligned.
+bwa mem -SP5M -t 4 /Users/anna/Desktop/day1_HiC_practice/data/reference/T2T_human.fna /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/splits/MoPh15_R1.fastq.gz /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/splits/MoPh15_R2.fastq.gz | samtools view -O BAM > /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/splits/MoPh15.fastq.gz.bam
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 45526 sequences (6443972 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (273, 13389, 253, 282)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (931, 2735, 5862)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 15724)
+[M::mem_pestat] mean and std.dev: (3505.67, 2839.88)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 20655)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (79, 126, 247)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 583)
+[M::mem_pestat] mean and std.dev: (165.79, 122.53)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 751)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (1274, 2812, 5742)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 14678)
+[M::mem_pestat] mean and std.dev: (3528.27, 2745.86)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 19146)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (817, 2831, 5205)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 13981)
+[M::mem_pestat] mean and std.dev: (3358.57, 2720.10)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 18369)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 45526 reads in 13.889 CPU sec, 3.547 real sec
+[main] Version: 0.7.19-r1273
+[main] CMD: bwa mem -SP5M -t 4 /Users/anna/Desktop/day1_HiC_practice/data/reference/T2T_human.fna /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/splits/MoPh15_R1.fastq.gz /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/splits/MoPh15_R2.fastq.gz
+[main] Real time: 5.464 sec; CPU: 14.595 sec
+(-:  Align of /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/splits/MoPh15.fastq.gz.bam done successfully
+(-: Finished sorting all sorted files into a single merge.
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Not including fragment map
+Start preprocess
+Writing header
+Writing body
+..................................................................................................................................................................................................................................................................................
+Writing footer
+
+Finished preprocess
+Error reading datasetnull
+java.io.EOFException
+	at htsjdk.tribble.util.LittleEndianInputStream.readString(LittleEndianInputStream.java:119)
+	at juicebox.data.DatasetReaderV2.read(DatasetReaderV2.java:156)
+	at juicebox.tools.utils.original.NormalizationVectorUpdater.updateHicFile(NormalizationVectorUpdater.java:78)
+	at juicebox.tools.clt.old.PreProcessing.run(PreProcessing.java:121)
+	at juicebox.tools.HiCTools.main(HiCTools.java:96)
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Not including fragment map
+Start preprocess
+Writing header
+Writing body
+............................................................................................................................................................................................................................................................................
+Writing footer
+
+Finished preprocess
+Error reading datasetnull
+java.io.EOFException
+	at htsjdk.tribble.util.LittleEndianInputStream.readString(LittleEndianInputStream.java:119)
+	at juicebox.data.DatasetReaderV2.read(DatasetReaderV2.java:156)
+	at juicebox.tools.utils.original.NormalizationVectorUpdater.updateHicFile(NormalizationVectorUpdater.java:78)
+	at juicebox.tools.clt.old.PreProcessing.run(PreProcessing.java:121)
+	at juicebox.tools.HiCTools.main(HiCTools.java:96)
+/Users/anna/Desktop/day1_HiC_practice/tools/juicer/scripts/common/juicer_tools is post-processing Hi-C for T2T_human
+Data read from /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/aligned/inter_30.hic.
+Motifs read from /Users/anna/Desktop/day1_HiC_practice/tools/juicer/references/motif
+
+ARROWHEAD:
+
+Picked up _JAVA_OPTIONS: -Xmx16384m
+Reading file: /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/aligned/inter_30.hic
+Error reading datasetnull
+Could not read hic file: null
+***! Problem while running Arrowhead
+(-: Pipeline successfully completed (-:
+Run cleanup.sh to remove the splits directory
+Check /Users/anna/Desktop/day1_HiC_practice/data/juicer/MoPh15/aligned for results
+**! cool file creation was not required by the user
+=== [MoPh15] Шаг 6/6: сохранение .hic в results/hic ===
+=== [MoPh15] готово: results/hic/MoPh15.inter_30.hic ===
+Все образцы обработаны: MoPh11 MoPh14 MoPh15
